@@ -13,7 +13,7 @@ The Rajasthan Map Data Scraper is a Python script that automates the extraction 
 - Python 3.6 or higher
 - WebDriver for Selenium (e.g., ChromiumEdge)
 
-
+### Code Structure
 - Import necessary libraries.
 - Define classes and functions for web scraping.
 - Configure logging for better tracking and debugging.
