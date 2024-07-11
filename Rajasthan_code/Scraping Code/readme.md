@@ -25,7 +25,7 @@ The Rajasthan Map Data Scraper is a Python script that automates the extraction 
 ### Setup Instructions
 
 1. Install requirement.txt.
-2. First open main.ipynb file and create MapScraper Object and call scrape_main function - It'll create a log name Scrapping_RJ.log in your file path.
+2. First open main.ipynb file and create MapScraper Object and call scrape_main function [#isFromMap marked True or False --If True then All District extracted from drop down if false district will extracted from Map] - It'll create a log name Scrapping_RJ.log in your file path.
 3. After Completing the above function pls check is there any eror log genrated or not if generated check nodeProblem list -- if list have data run step 2 again.
 4. After Completing aove process create json call processRoot function vy passing rootNode and json file name / pathEx -  processRoot(scrapRoot.rootNode, scrapRoot.checkpoint_file).
 5. Lastly make dataframe rom above genarated json to convert it excel for that run jsonToDf fuction by passing above created json file path.
