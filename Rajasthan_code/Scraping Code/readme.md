@@ -25,11 +25,29 @@ The Rajasthan Map Data Scraper is a Python script that automates the extraction 
 ### Setup Instructions
 
 1. Install requirement.txt.
-2. First open main.ipynb file and create MapScraper Object and call scrape_main function [#isFromMap marked True or False --If True then All District extracted from drop down if false district will extracted from Map] - It'll create a log name Scrapping_RJ.log in your file path.
-3. After Completing the above function pls check is there any eror log genrated or not if generated check nodeProblem list -- if list have data run step 2 again.
-4. After Completing aove process create json call processRoot function vy passing rootNode and json file name / pathEx -  processRoot(scrapRoot.rootNode, scrapRoot.checkpoint_file).
-5. Lastly make dataframe rom above genarated json to convert it excel for that run jsonToDf fuction by passing above created json file path.
+2. First open scrapingMain.py file - It'll create a log name Scrapping_RJ_dropdownData.log and Scrapping_RJ_mapData.log and two json file dropdownData.json and mapdata.json in your file path.
+3. Lastly make dataframe above genarated json to convert it excel for that run jsonToDf fuction by passing above created json file path. This function code pasted bellow -
 
+# Steps to Convert JSON to DataFrame
 
+## Creating the DataFrame from JSON
 
+To convert a JSON file into a Pandas DataFrame, you can use the following function:
 
+```python
+import json
+import pandas as pd
+
+def jsonToDf(jsonfilepath='checkpoint.json'):
+    with open(jsonfilepath, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    # Flatten JSON and create DataFrame
+    df = pd.DataFrame([
+        (dist['name'], dist['properties']['id'], tehsil['name'], tehsil['properties']['id'], village['name'], village['properties']['id'])
+        for dist in data
+        for tehsil in dist['children']
+        for village in tehsil['children']
+    ], columns=['district', 'district_id', 'tehsil', 'tehsil_id', 'village', 'village_id'])
+
+    return df

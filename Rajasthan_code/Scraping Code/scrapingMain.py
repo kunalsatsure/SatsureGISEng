@@ -232,11 +232,19 @@ class MapScraper:
 def run_scraper(instance_id, isFromMap, jsonFilename):
     scraper = MapScraper(instance_id = instance_id)
     scraper.scrape_main(isFromMap)
+    count = 0
     if scraper.nodeProblem:
         while scraper.nodeProblem:
+            if count >= 10:
+                break
             scraper.scrape_main(isFromMap)
+            count += 1
     scraper.processRoot(scraper.rootNode, jsonFilename)
     print(f'Process Done - {jsonFilename}')
+    if count >= 10:
+        print("Their are Some District have scrapping problem.........")
+        print('Problemtic District Are - ',*scraper.nodeProblem)
+    
 
 
 if __name__ == '__main__':
@@ -251,4 +259,6 @@ if __name__ == '__main__':
 
     for p in processes:
         p.join()
+
+
 
