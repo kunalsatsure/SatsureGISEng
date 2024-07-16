@@ -51,3 +51,10 @@ def jsonToDf(jsonfilepath='checkpoint.json'):
     ], columns=['district', 'district_id', 'tehsil', 'tehsil_id', 'village', 'village_id'])
 
     return df
+
+```
+# Steps to Check if within a district, the district,district_id, village and village_id combinations repeat for two tehsils in that district
+1. For that open checkDuplication.ipynb file there are two method 
+2. For Method 1 - keep dropdown df as first piority during Combine DataFrames
+3. For Method 2 - No need to maintain specific order to combine
+## For Better Output Pls Cross Check Both Result Output
