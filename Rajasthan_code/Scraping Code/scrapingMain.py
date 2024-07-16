@@ -108,7 +108,6 @@ class MapScraper:
                 logging.error(f"Error in Some District")
                 isProblem = True
                 districts = [(i, j) for i, j in districts if i in self.nodeProblem]
-            districts = districts[:1]
             if districts is not None:
                 for district, dist_id in districts:
                     if not isFromMap:
