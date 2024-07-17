@@ -1,22 +1,22 @@
-# upScrapV1-1stWebsite(Beta)
+# upScrapV1-1stWebsite (Beta)
 
-This repository contains the code to scrape data from the UP Bhulekh website to retrieve district, district_id, tehsil, tehsil_id , village and village_id.
-
-## Overview
-
-The script fetches district, district_id, tehsil, tehsil_id , village and village_id by interacting with the [UP Bhulekh website](https://upbhulekh.gov.in/). This automated approach allows users to gather necessary land records efficiently. But this website not Updated Properly -> less amount of info.
-
-# upScrapV1-2ndWebsite(Beta)
-
-This repository contains the code to scrape data from the UP Bhulekh website to retrieve district, district_id, tehsil, tehsil_id , village and village_id.
+This repository contains the code to scrape data from the UP Bhulekh website to retrieve district, district_id, tehsil, tehsil_id, village, and village_id.
 
 ## Overview
 
-The script fetches district, district_id, tehsil, tehsil_id , village and village_id by interacting with the [UP Bhulekh website](https://upbhulekh.gov.in/GeoDashboard/public_report/). This automated approach allows users to gather necessary land records efficiently.
+The script fetches district, district_id, tehsil, tehsil_id, village, and village_id by interacting with the [UP Bhulekh website](https://upbhulekh.gov.in/). **Note: This website is not updated properly, resulting in a limited amount of information.**
+
+# upScrapV1-2ndWebsite (Beta)
+
+This repository contains the code to scrape data from the UP Bhulekh website to retrieve district, district_id, tehsil, tehsil_id, village, and village_id.
+
+## Overview
+
+The script fetches district, district_id, tehsil, tehsil_id, village, and village_id by interacting with the [UP Bhulekh website](https://upbhulekh.gov.in/GeoDashboard/public_report/). This automated approach allows users to gather necessary land records efficiently.
 
 ## Features
 
-- All district, district_id, tehsil, tehsil_id , village and village_id --> convert to .csv.
+- Retrieves all districts, district_id, tehsil, tehsil_id, village, and village_id, and converts the data to CSV format.
 - Utilizes Selenium for web automation.
 - Outputs results in a structured format (e.g., CSV).
 
