@@ -1,3 +1,7 @@
+# MP Scrapping V2.0
+
+Pls use UP Scrap Update.py file to get fast output -- at khara level -- all district.
+
 # MP Scrapping V1.0
 
 This repository contains the code to scrape data from the MP Bhulekh website to retrieve counts of Khasra for all villages in Agar Malwa district.
